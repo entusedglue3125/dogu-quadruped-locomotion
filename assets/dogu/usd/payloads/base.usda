@@ -1,0 +1,471 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.3.2"
+    }
+    defaultPrim = "dogu"
+    doc = """Generated from Composed Stage of root layer /home/chakradhar/Desktop/dogu/usd/dogu/payloads/base.usd
+"""
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    subLayers = [
+        @./robot.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "dogu" (
+    prepend apiSchemas = ["GeomModelAPI", "IsaacRobotAPI"]
+    assetInfo = {
+        string name = "dogu"
+    }
+    kind = "component"
+)
+{
+    float3[] extentsHint = [(-0.13753413, -0.0990249, -0.13972531), (0.118284196, 0.099457145, 0.016055912), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (3.4028235e38, 3.4028235e38, 3.4028235e38), (-3.4028235e38, -3.4028235e38, -3.4028235e38), (-0.13753413, -0.0990249, -0.13972531), (0.118284196, 0.099457145, 0.016055912)]
+    custom rel isaac:physics:robotJoints
+    custom rel isaac:physics:robotLinks
+    custom token isaac:robotType = "Default"
+
+    def Scope "Materials"
+    {
+    }
+
+    def Scope "Geometry"
+    {
+        def Xform "base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            def Xform "dogu_base" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/dogu_base>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Xform "fl_hip_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (-0.06983333, 0.70365006, -0.06983358, 0.7036499)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.087024, 0.009211, -0.003398)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "dogu_fl_hip" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_fl_hip>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "fl_femur_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (-0.16923454, -0.16923505, -0.68655616, 0.6865565)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.020056, -0.063601, 0.009831)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "dogu_fl_femur" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_fl_femur>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "fl_tibia_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (-0.34424496, -0.0005341559, -0.012839576, 0.93879193)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.056967, 0.000379, 0.001526)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "dogu_fl_tibia" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_fl_tibia>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "dogu_fl_tibia_1" (
+                            displayName = "dogu_fl_tibia"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_fl_tibia_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "dogu_fl_femur_1" (
+                        displayName = "dogu_fl_femur"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_fl_femur_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "dogu_fl_hip_1" (
+                    displayName = "dogu_fl_hip"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_fl_hip_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "fr_hip_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (0.70419955, -0.06405561, 0.7041994, -0.06405561)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0.087024, -0.00891, -0.003466)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "dogu_fr_hip" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_fr_hip>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "fr_femur_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (0.6846036, 0.68460333, 0.17696927, -0.17696922)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.019846, -0.064343, 0.004818)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "dogu_fr_femur" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_fr_femur>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "fr_tibia_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (0.32412013, -0.0017589651, 0.0049317926, 0.9460014)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.056805, -0.000026, 0.001632)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "dogu_fr_tibia" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_fr_tibia>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "dogu_fr_tibia_1" (
+                            displayName = "dogu_fr_tibia"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_fr_tibia_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "dogu_fr_femur_1" (
+                        displayName = "dogu_fr_femur"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_fr_femur_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "dogu_fr_hip_1" (
+                    displayName = "dogu_fr_hip"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_fr_hip_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "bl_hip_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (-0.0686036, 0.70377105, 0.068603836, -0.7037708)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.101689, 0.009211, -0.003398)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "dogu_bl_hip" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_bl_hip>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "bl_femur_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (0.677355, 0.6732805, -0.21608612, 0.20295408)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0.02001, -0.063604, -0.009756)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "dogu_bl_femur" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_bl_femur>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "bl_tibia_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (-0.2958839, 0.013412228, 0.016215103, 0.9549921)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.056915, -0.003142, -0.007694)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "dogu_bl_tibia" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_bl_tibia>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "dogu_bl_tibia_1" (
+                            displayName = "dogu_bl_tibia"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_bl_tibia_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "dogu_bl_femur_1" (
+                        displayName = "dogu_bl_femur"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_bl_femur_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "dogu_bl_hip_1" (
+                    displayName = "dogu_bl_hip"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_bl_hip_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "br_hip_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                quatf xformOp:orient = (0.7032158, -0.07407904, -0.7032156, 0.07407904)
+                float3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (-0.101689, -0.00891, -0.003466)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Xform "dogu_br_hip" (
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_br_hip>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                def Xform "br_femur_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    quatf xformOp:orient = (-0.1803116, -0.17073809, 0.6861839, -0.68373084)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-0.019846, -0.064343, -0.004818)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                    def Xform "dogu_br_femur" (
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_br_femur>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+
+                    def Xform "br_tibia_link" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        quatf xformOp:orient = (0.33803216, 0.0073593757, 0.014808053, 0.94098926)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0.057104, 0.000281, 0.003004)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                        def Xform "dogu_br_tibia" (
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_br_tibia>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+
+                        def Xform "dogu_br_tibia_1" (
+                            displayName = "dogu_br_tibia"
+                            instanceable = true
+                            prepend references = @./instances.usda@</Instances/dogu_br_tibia_1>
+                        )
+                        {
+                            quatd xformOp:orient = (1, 0, 0, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                        }
+                    }
+
+                    def Xform "dogu_br_femur_1" (
+                        displayName = "dogu_br_femur"
+                        instanceable = true
+                        prepend references = @./instances.usda@</Instances/dogu_br_femur_1>
+                    )
+                    {
+                        quatd xformOp:orient = (1, 0, 0, 0)
+                        double3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (0, 0, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                    }
+                }
+
+                def Xform "dogu_br_hip_1" (
+                    displayName = "dogu_br_hip"
+                    instanceable = true
+                    prepend references = @./instances.usda@</Instances/dogu_br_hip_1>
+                )
+                {
+                    quatd xformOp:orient = (1, 0, 0, 0)
+                    double3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+            }
+
+            def Xform "dogu_base_1" (
+                displayName = "dogu_base"
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/dogu_base_1>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Scope "Physics"
+    {
+    }
+
+    def Scope "VisualMaterials"
+    {
+    }
+}
+

@@ -1,0 +1,483 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.3.2"
+    }
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    upAxis = "Z"
+)
+
+def Scope "Instances"
+{
+    def Xform "dogu_base" (
+        prepend references = @./geometries.usd@</Geometries/dogu_base>
+    )
+    {
+        over "dogu_base" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_base/VisualMaterials/dogu_base>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_base" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_base>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_base_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_base>
+    )
+    {
+        over "dogu_base" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_fl_hip" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fl_hip>
+    )
+    {
+        over "dogu_fl_hip" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_fl_hip/VisualMaterials/dogu_hip>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_hip" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_hip>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_fl_hip_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fl_hip>
+    )
+    {
+        over "dogu_fl_hip" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_fl_femur" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fl_femur>
+    )
+    {
+        over "dogu_fl_femur" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_fl_femur/VisualMaterials/dogu_femur>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_femur" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_femur>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_fl_femur_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fl_femur>
+    )
+    {
+        over "dogu_fl_femur" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_fl_tibia" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fl_tibia>
+    )
+    {
+        over "dogu_fl_tibia" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_fl_tibia/VisualMaterials/dogu_tibia>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_tibia" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_tibia>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_fl_tibia_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fl_tibia>
+    )
+    {
+        over "dogu_fl_tibia" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_fr_hip" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fr_hip>
+    )
+    {
+        over "dogu_fr_hip" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_fr_hip/VisualMaterials/dogu_hip>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_hip" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_hip>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_fr_hip_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fr_hip>
+    )
+    {
+        over "dogu_fr_hip" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_fr_femur" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fr_femur>
+    )
+    {
+        over "dogu_fr_femur" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_fr_femur/VisualMaterials/dogu_femur>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_femur" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_femur>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_fr_femur_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fr_femur>
+    )
+    {
+        over "dogu_fr_femur" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_fr_tibia" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fr_tibia>
+    )
+    {
+        over "dogu_fr_tibia" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_fr_tibia/VisualMaterials/dogu_tibia>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_tibia" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_tibia>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_fr_tibia_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_fr_tibia>
+    )
+    {
+        over "dogu_fr_tibia" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_bl_hip" (
+        prepend references = @./geometries.usd@</Geometries/dogu_bl_hip>
+    )
+    {
+        over "dogu_bl_hip" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_bl_hip/VisualMaterials/dogu_hip>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_hip" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_hip>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_bl_hip_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_bl_hip>
+    )
+    {
+        over "dogu_bl_hip" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_bl_femur" (
+        prepend references = @./geometries.usd@</Geometries/dogu_bl_femur>
+    )
+    {
+        over "dogu_bl_femur" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_bl_femur/VisualMaterials/dogu_femur>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_femur" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_femur>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_bl_femur_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_bl_femur>
+    )
+    {
+        over "dogu_bl_femur" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_bl_tibia" (
+        prepend references = @./geometries.usd@</Geometries/dogu_bl_tibia>
+    )
+    {
+        over "dogu_bl_tibia" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_bl_tibia/VisualMaterials/dogu_tibia>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_tibia" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_tibia>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_bl_tibia_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_bl_tibia>
+    )
+    {
+        over "dogu_bl_tibia" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_br_hip" (
+        prepend references = @./geometries.usd@</Geometries/dogu_br_hip>
+    )
+    {
+        over "dogu_br_hip" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_br_hip/VisualMaterials/dogu_hip>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_hip" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_hip>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_br_hip_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_br_hip>
+    )
+    {
+        over "dogu_br_hip" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_br_femur" (
+        prepend references = @./geometries.usd@</Geometries/dogu_br_femur>
+    )
+    {
+        over "dogu_br_femur" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_br_femur/VisualMaterials/dogu_femur>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_femur" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_femur>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_br_femur_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_br_femur>
+    )
+    {
+        over "dogu_br_femur" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+
+    def Xform "dogu_br_tibia" (
+        prepend references = @./geometries.usd@</Geometries/dogu_br_tibia>
+    )
+    {
+        over "dogu_br_tibia" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/dogu_br_tibia/VisualMaterials/dogu_tibia>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "dogu_tibia" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/dogu_tibia>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "dogu_br_tibia_1" (
+        prepend references = @./geometries.usd@</Geometries/dogu_br_tibia>
+    )
+    {
+        over "dogu_br_tibia" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+        }
+    }
+}
+

@@ -1,0 +1,202 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.3.2"
+    }
+    defaultPrim = "dogu"
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "dogu"
+{
+    over "Physics"
+    {
+        over "fl_hip_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "fl_femur_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "fl_tibia_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "fr_hip_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "fr_femur_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "fr_tibia_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "bl_hip_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "bl_femur_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "bl_tibia_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "br_hip_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "br_femur_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        over "br_tibia_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+            prepend apiSchemas = ["MjcJointAPI"]
+        )
+        {
+        }
+
+        def MjcActuator "fl_hip_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/fl_hip_joint>
+        }
+
+        def MjcActuator "fl_femur_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/fl_femur_joint>
+        }
+
+        def MjcActuator "fl_tibia_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/fl_tibia_joint>
+        }
+
+        def MjcActuator "fr_hip_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/fr_hip_joint>
+        }
+
+        def MjcActuator "fr_femur_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/fr_femur_joint>
+        }
+
+        def MjcActuator "fr_tibia_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/fr_tibia_joint>
+        }
+
+        def MjcActuator "bl_hip_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/bl_hip_joint>
+        }
+
+        def MjcActuator "bl_femur_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/bl_femur_joint>
+        }
+
+        def MjcActuator "bl_tibia_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/bl_tibia_joint>
+        }
+
+        def MjcActuator "br_hip_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/br_hip_joint>
+        }
+
+        def MjcActuator "br_femur_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/br_femur_joint>
+        }
+
+        def MjcActuator "br_tibia_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 2
+            uniform double mjc:forceRange:min = -2
+            custom rel mjc:target
+            append rel mjc:target = </dogu/Physics/br_tibia_joint>
+        }
+    }
+}
+

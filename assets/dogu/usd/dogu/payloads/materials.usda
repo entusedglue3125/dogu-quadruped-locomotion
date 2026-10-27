@@ -1,0 +1,147 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.3.2"
+    }
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    upAxis = "Z"
+)
+
+def Scope "Materials"
+{
+    def Material "dogu_base"
+    {
+        color3f inputs:diffuseColor = (0.046964195, 0.26327342, 0.6920712)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/dogu_base/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/dogu_base/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/dogu_base.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/dogu_base.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/dogu_base.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/dogu_base.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+
+    def Material "dogu_hip"
+    {
+        color3f inputs:diffuseColor = (0.07323897, 0.08353512, 0.10653924)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/dogu_hip/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/dogu_hip/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/dogu_hip.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/dogu_hip.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/dogu_hip.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/dogu_hip.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+
+    def Material "dogu_femur"
+    {
+        color3f inputs:diffuseColor = (0.8480884, 0.34239164, 0.033104762)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/dogu_femur/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/dogu_femur/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/dogu_femur.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/dogu_femur.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/dogu_femur.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/dogu_femur.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+
+    def Material "dogu_tibia"
+    {
+        color3f inputs:diffuseColor = (0.6920712, 0.71056664, 0.7484142)
+        float inputs:metallic = 0
+        float inputs:opacity = 1
+        float inputs:roughness = 0.5
+        token inputs:wrapMode = "repeat"
+        token outputs:displacement (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:displacement.connect = </Materials/dogu_tibia/PreviewSurface.outputs:displacement>
+        token outputs:surface (
+            displayGroup = "Outputs"
+        )
+        prepend token outputs:surface.connect = </Materials/dogu_tibia/PreviewSurface.outputs:surface>
+        token outputs:volume (
+            displayGroup = "Outputs"
+        )
+
+        def Shader "PreviewSurface" (
+            apiSchemas = ["NodeDefAPI"]
+        )
+        {
+            token info:id = "UsdPreviewSurface"
+            prepend color3f inputs:diffuseColor.connect = </Materials/dogu_tibia.inputs:diffuseColor>
+            prepend float inputs:metallic.connect = </Materials/dogu_tibia.inputs:metallic>
+            prepend float inputs:opacity.connect = </Materials/dogu_tibia.inputs:opacity>
+            prepend float inputs:roughness.connect = </Materials/dogu_tibia.inputs:roughness>
+            token outputs:displacement
+            token outputs:surface
+        }
+    }
+}
+

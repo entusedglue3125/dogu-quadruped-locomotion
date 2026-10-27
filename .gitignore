@@ -1,0 +1,19 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# Temporary / OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Logs (keep tfevents if needed, exclude raw crash/debug logs)
+*.log

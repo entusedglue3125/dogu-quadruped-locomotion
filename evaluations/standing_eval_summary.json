@@ -1,0 +1,12 @@
+{
+  "task": "standing",
+  "checkpoint": "/home/chakradhar/robotics/dogu_locomotion/checkpoints/dogu_standing/standing_best.pt",
+  "num_episodes": 10,
+  "mean_reward": 28.927,
+  "std_reward": 0.07,
+  "mean_episode_length": 1000.0,
+  "mean_displacement_m": 0.0275,
+  "mean_base_height_m": 0.1256,
+  "target_height_m": 0.108,
+  "fall_rate_percent": 0.0
+}

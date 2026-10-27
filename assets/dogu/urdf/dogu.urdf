@@ -1,0 +1,385 @@
+<?xml version="1.0" ?>
+<robot name="dogu">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_base.stl"/>
+      </geometry>
+      <material name="dogu_base">
+        <color rgba="0.24 0.55 0.85 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.000020 0.000005 -0.007094" rpy="0 0 0"/>
+      <mass value="0.4628"/>
+      <inertia ixx="1.3756e-04" ixy="6.5186e-08" ixz="7.3986e-06" iyy="2.7808e-03" iyz="7.4938e-09" izz="2.8225e-03"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_base.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="bl_femur_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_bl_femur.stl"/>
+      </geometry>
+      <material name="dogu_femur">
+        <color rgba="0.93 0.62 0.20 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.016171 0.000708 -0.016948" rpy="0 0 0"/>
+      <mass value="0.0425"/>
+      <inertia ixx="6.6426e-06" ixy="-4.5378e-07" ixz="-1.0378e-06" iyy="1.9632e-05" iyz="-1.2471e-07" izz="1.4769e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_bl_femur.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="bl_hip_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_bl_hip.stl"/>
+      </geometry>
+      <material name="dogu_hip">
+        <color rgba="0.30 0.32 0.36 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.003194 -0.033303 -0.009268" rpy="0 0 0"/>
+      <mass value="0.0424"/>
+      <inertia ixx="2.3807e-05" ixy="1.6113e-06" ixz="-1.4430e-08" iyy="8.6187e-06" iyz="1.5176e-07" izz="2.0260e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_bl_hip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="bl_tibia_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_bl_tibia.stl"/>
+      </geometry>
+      <material name="dogu_tibia">
+        <color rgba="0.85 0.86 0.88 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.000059 0.019545 -0.017454" rpy="0 0 0"/>
+      <mass value="0.0192"/>
+      <inertia ixx="1.3260e-05" ixy="-2.4566e-09" ixz="1.9228e-08" iyy="1.6771e-06" iyz="-8.8142e-07" izz="1.2376e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_bl_tibia.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="br_femur_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_br_femur.stl"/>
+      </geometry>
+      <material name="dogu_femur">
+        <color rgba="0.93 0.62 0.20 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.016281 -0.000881 -0.016880" rpy="0 0 0"/>
+      <mass value="0.0425"/>
+      <inertia ixx="6.6263e-06" ixy="3.8583e-07" ixz="-1.0193e-06" iyy="1.9513e-05" iyz="-4.7309e-08" izz="1.4653e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_br_femur.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="br_hip_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_br_hip.stl"/>
+      </geometry>
+      <material name="dogu_hip">
+        <color rgba="0.30 0.32 0.36 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.003126 -0.033373 -0.005269" rpy="0 0 0"/>
+      <mass value="0.0424"/>
+      <inertia ixx="2.3807e-05" ixy="-1.6113e-06" ixz="-1.4430e-08" iyy="8.6187e-06" iyz="-1.5175e-07" izz="2.0259e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_br_hip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="br_tibia_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_br_tibia.stl"/>
+      </geometry>
+      <material name="dogu_tibia">
+        <color rgba="0.85 0.86 0.88 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.000444 -0.018940 -0.019315" rpy="0 0 0"/>
+      <mass value="0.0192"/>
+      <inertia ixx="1.2993e-05" ixy="-3.0590e-07" ixz="4.4757e-08" iyy="1.6365e-06" iyz="5.2331e-07" izz="1.2169e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_br_tibia.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="fl_femur_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fl_femur.stl"/>
+      </geometry>
+      <material name="dogu_femur">
+        <color rgba="0.93 0.62 0.20 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.016098 0.000991 -0.016925" rpy="0 0 0"/>
+      <mass value="0.0425"/>
+      <inertia ixx="6.6415e-06" ixy="-4.3354e-07" ixz="-1.0476e-06" iyy="1.9634e-05" iyz="-2.9789e-08" izz="1.4765e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fl_femur.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="fl_hip_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fl_hip.stl"/>
+      </geometry>
+      <material name="dogu_hip">
+        <color rgba="0.30 0.32 0.36 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.003194 -0.033303 0.009268" rpy="0 0 0"/>
+      <mass value="0.0424"/>
+      <inertia ixx="2.3807e-05" ixy="-1.6113e-06" ixz="-1.4430e-08" iyy="8.6187e-06" iyz="-1.5175e-07" izz="2.0260e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fl_hip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="fl_tibia_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fl_tibia.stl"/>
+      </geometry>
+      <material name="dogu_tibia">
+        <color rgba="0.85 0.86 0.88 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.000779 0.018170 -0.018286" rpy="0 0 0"/>
+      <mass value="0.0192"/>
+      <inertia ixx="1.3256e-05" ixy="2.4104e-07" ixz="2.0567e-08" iyy="1.6253e-06" iyz="-4.0823e-07" izz="1.2432e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fl_tibia.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="fr_femur_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fr_femur.stl"/>
+      </geometry>
+      <material name="dogu_femur">
+        <color rgba="0.93 0.62 0.20 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.016284 -0.000645 -0.016891" rpy="0 0 0"/>
+      <mass value="0.0425"/>
+      <inertia ixx="6.6283e-06" ixy="4.0029e-07" ixz="-1.0139e-06" iyy="1.9517e-05" iyz="2.0378e-08" izz="1.4654e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fr_femur.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="fr_hip_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fr_hip.stl"/>
+      </geometry>
+      <material name="dogu_hip">
+        <color rgba="0.30 0.32 0.36 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="0.003126 -0.033373 0.005268" rpy="0 0 0"/>
+      <mass value="0.0424"/>
+      <inertia ixx="2.3807e-05" ixy="1.6113e-06" ixz="-1.4430e-08" iyy="8.6187e-06" iyz="1.5175e-07" izz="2.0259e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fr_hip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="fr_tibia_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fr_tibia.stl"/>
+      </geometry>
+      <material name="dogu_tibia">
+        <color rgba="0.85 0.86 0.88 1"/>
+      </material>
+    </visual>
+    <inertial>
+      <origin xyz="-0.000955 -0.018452 -0.017948" rpy="0 0 0"/>
+      <mass value="0.0192"/>
+      <inertia ixx="1.2986e-05" ixy="-4.2338e-07" ixz="3.0467e-08" iyy="1.6432e-06" iyz="5.1372e-07" izz="1.2169e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="/home/chakradhar/robotics/dogu_locomotion/assets/dogu/meshes/dogu_fr_tibia.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="fl_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="fl_hip_link"/>
+    <origin xyz="0.087024 0.009211 -0.003398" rpy="-1.570798 -1.372955 -1.570795"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="fl_femur_joint" type="revolute">
+    <parent link="fl_hip_link"/>
+    <child link="fl_femur_link"/>
+    <origin xyz="-0.020056 -0.063601 0.009831" rpy="-1.570796 0.483360 3.141592"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="fl_tibia_joint" type="revolute">
+    <parent link="fl_femur_link"/>
+    <child link="fl_tibia_link"/>
+    <origin xyz="0.056967 0.000379 0.001526" rpy="-0.023743 0.009843 -2.438780"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="fr_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="fr_hip_link"/>
+    <origin xyz="0.087024 -0.008910 -0.003466" rpy="-1.570795 1.389371 -1.570795"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="fr_femur_joint" type="revolute">
+    <parent link="fr_hip_link"/>
+    <child link="fr_femur_link"/>
+    <origin xyz="0.019846 -0.064343 0.004818" rpy="1.570796 0.505923 -0.000000"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="fr_tibia_joint" type="revolute">
+    <parent link="fr_femur_link"/>
+    <child link="fr_tibia_link"/>
+    <origin xyz="0.056805 -0.000026 0.001632" rpy="0.008191 0.006525 2.481447"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="bl_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="bl_hip_link"/>
+    <origin xyz="-0.101689 0.009211 -0.003398" rpy="-1.570798 1.376450 1.570795"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="bl_femur_joint" type="revolute">
+    <parent link="bl_hip_link"/>
+    <child link="bl_femur_link"/>
+    <origin xyz="0.020010 -0.063604 -0.009756" rpy="1.570796 -0.601675 -0.019445"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="bl_tibia_joint" type="revolute">
+    <parent link="bl_femur_link"/>
+    <child link="bl_tibia_link"/>
+    <origin xyz="0.056915 -0.003142 -0.007694" rpy="0.023050 -0.035220 -2.541100"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="br_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="br_hip_link"/>
+    <origin xyz="-0.101689 -0.008910 -0.003466" rpy="-1.570795 -1.360884 1.570795"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="br_femur_joint" type="revolute">
+    <parent link="br_hip_link"/>
+    <child link="br_femur_link"/>
+    <origin xyz="-0.019846 -0.064343 -0.004818" rpy="-1.570796 -0.501717 3.127616"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+  <joint name="br_tibia_joint" type="revolute">
+    <parent link="br_femur_link"/>
+    <child link="br_tibia_link"/>
+    <origin xyz="0.057104 0.000281 0.003004" rpy="0.032850 -0.003839 2.451781"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57080" upper="1.57080" effort="2.0" velocity="10.0"/>
+    <dynamics damping="0.05" friction="0.02"/>
+  </joint>
+</robot>
